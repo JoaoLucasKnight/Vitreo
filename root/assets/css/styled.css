@@ -8,14 +8,16 @@
 }
 
 .esquerda {
-    width: 25vw;
+    width: auto;
     height: 100vh;
-    border-width: 10vw; 
-    border-color: #DFDFDF;   
+    border-style: solid;
+    border-width: 0 1px 0 0; 
+    border-color: #DFDFDF;  
+    padding: 0 1vw 0 5vw;
 }
 
 .logo {
-    width: 25vw;
+    width: 20vw;
 }
 .menu{
     display: flex;
@@ -39,7 +41,7 @@
 }
 
 .central {
-    width: 50vw;
+    width: 60vw;
     height: auto;
 }
 
@@ -48,4 +50,13 @@
     color:#DFDFDF ;
     font-size: 32px;
     width: 260px;
+}
+
+.direita {
+    width: 20vw;
+    border-width: 0 0 0 1px;
+    border-color: #DFDFDF;
+    border-style: solid;
+    padding: 0 5vw 0 1vw;
+
 }
