@@ -1,0 +1,49 @@
+{
+        "user": [
+            {
+            "email": "black00@email.com",
+            "senha": "senha00",
+            "id": "00",
+            "nome": "Black",
+            "cor": "#000000",
+            "premium": false
+            },
+
+            {
+            "email": "batman@email.com",
+            "senha": "senhaab",
+            "id": "ab",
+            "nome": "Batman",
+            "cor": "azul",
+            "premium": false
+            },
+
+            {
+            "email": "mulhermaravilha@email.com",
+            "senha": "senhaop",
+            "id": "op",
+            "nome": "Mulher Maravilha",
+            "cor": "azul",
+            "premium": false
+            },
+
+            {
+            "email": "darthvader@email.com",
+            "senha": "senha@1",
+            "id": "@1",
+            "nome": "Darth Vader",
+            "cor": "azul",
+            "premium": false
+            },
+
+            {
+            "email": "bilbob.@email.com",
+            "senha": "senhaz7",
+            "id": "z7",
+            "nome": "Bilbo B.",
+            "cor": "azul",
+            "premium": false
+            }
+
+    ]
+  }
