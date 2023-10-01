@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+
+.fundo {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.esquerda {
+    width: 25vw;
+    height: 100vh;
+    border-width: 10vw; 
+    border-color: #DFDFDF;   
+}
+
+.logo {
+    width: 25vw;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 2vw;
+    margin: 40px 0 0 0;
+}
+
+.menu img {
+    width: 32px;
+    height: 32px;  
+}
+
+.menu p {
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+    width: 260px;
+}
+
+.central {
+    width: 50vw;
+    height: auto;
+}
+
+.central p {
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+    width: 260px;
+}
