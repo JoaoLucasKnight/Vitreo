@@ -9,11 +9,11 @@
 
 .esquerda {
     width: auto;
-    height: 100vh;
     border-style: solid;
     border-width: 0 1px 0 0; 
     border-color: #DFDFDF;  
     padding: 0 1vw 0 5vw;
+    
 }
 
 .logo {
@@ -41,15 +41,87 @@
 }
 
 .central {
-    width: 60vw;
+    width: 50vw;
     height: auto;
 }
 
-.central p {
+.nav {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav p {
     font-family: 'Cutive Mono', monospace;
     color:#DFDFDF ;
     font-size: 32px;
-    width: 260px;
+    width: auto;
+}
+
+.post {
+    padding: 3vw;
+}
+
+.post_user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post_user img {
+    width: 3vw;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.user button {
+    width: 3.5vw;
+    height: 3.5vw;
+    background-color: black;
+    margin: 0 2vw 0 0 ;
+    border: 2px;
+    border-color: #DFDFDF;
+    border-style: solid;
+    border-radius: 16px 0 16px 0;
+}
+
+.user p {
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+      
+    line-height: 3.5vw;
+    text-align: center;
+}
+
+.post_cont {
+    background-color: #8C8C8C;
+    padding: 2vw;
+    margin: 3vh 0;
+    border-radius: 32px 0 32px 0;
+}
+
+.post_cont p {
+    text-align: center;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+      
+}
+
+.post_int{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.post_int img {
+    width: 2vw;
 }
 
 .direita {
@@ -57,6 +129,69 @@
     border-width: 0 0 0 1px;
     border-color: #DFDFDF;
     border-style: solid;
-    padding: 0 5vw 0 1vw;
+    padding: 1vw 5vw 1vw 1vw;
 
+}
+
+.busca {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 15vw;
+    height: 3vw;
+    background-color: #263326;
+    border-style: solid;
+     border-radius: 24px 0 24px 0;;
+}
+
+.busca img {
+    width: 1.5vw;
+    margin: 0 0.5vw;
+}
+
+.busca p{
+    text-align: center;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+}
+
+.texto {
+    width: 15vw;
+    text-align: center;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 24px;
+    margin: 2vh 0 2vh 0;
+}
+
+.recomendacoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 15vw;
+    margin: 3vh 0;
+   
+}
+
+.recomendacoes div {
+    width: 2.5vw;
+    height: 2.5vw;
+    background-color: black;
+    border: 2px;
+    border-color: #DFDFDF;
+    border-style: solid;
+    border-radius: 16px 0 16px 0;
+}
+
+.recomendacoes p {
+    text-align: center;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 24px;
+    line-height: 2.5vw;
+}
+
+.recomendacoes img {
+    width: 1.5vw;
 }
