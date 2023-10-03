@@ -19,25 +19,47 @@
 .logo {
     width: 20vw;
 }
+
 .menu{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: row; 
     padding-left: 2vw;
     margin: 40px 0 0 0;
+    background-color: black;
+    border-style: none;
+}
+
+.menu.ativo {
+    display: flex;
+    flex-direction: row; 
+    padding-left: 2vw;
+    margin: 40px 0 0 0;
+    background-color: black;
+    border-style: none;
+    font-weight: bold;
 }
 
 .menu img {
     width: 32px;
-    height: 32px;  
+    height: 32px;
+    margin: 0 1vw;
+      
 }
 
 .menu p {
+   
     font-family: 'Cutive Mono', monospace;
     color:#DFDFDF ;
     font-size: 32px;
-    width: 260px;
+    width: auto;
+}
+
+.menu p:focus{
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 36px;
+    width: auto;
+    
 }
 
 .central {
