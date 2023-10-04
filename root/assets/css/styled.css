@@ -217,3 +217,179 @@
 .recomendacoes img {
     width: 1.5vw;
 }
+
+/* config*/
+
+.central_user {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 2vh 0;
+    
+}
+
+.central_user p {
+    width: auto;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+    margin: 3vh 0 0 2vw;
+}
+
+.central_user input {
+    width: 45vw;
+    height: 5vh;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 32px;
+    border-width: 0px;
+    border-radius: 20px 0 20px  0;
+    padding-left: 15px;
+    background-color: #DFDFDF;
+    margin: 2vh 0;
+    align-self: center;
+}
+
+
+.central_seg {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 2vh 0;
+}
+
+.central_seg p {
+    width: auto;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+    margin: 3vh 0 0 2vw;
+}
+
+#destaque {
+    font-size: 36px ;
+}
+
+.central_idioma {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 2vh 0;
+}
+
+.central_idioma p {
+    width: auto;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+    margin: 3vh 0 0 2vw;
+}
+
+.central_idioma select {
+    width: 45vw;
+    height: 5vh;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 28px;
+    border-width: 0px;
+    border-radius: 20px 0 20px  0;
+    padding-left: 15px;
+    background-color: #DFDFDF;
+    margin: 2vh 0;
+    align-self: center;
+}
+
+.central_notif {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 2vh 0;
+}
+
+.central_notif p {
+    width: auto;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+    margin: 2vh 0 0 2vw;
+}
+
+#radius {
+    margin-left: 5vw;
+}
+
+.central_ass {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 2vh 0;
+}
+
+.central_ass p{
+    width: auto;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+    margin: 2vh 0 0 2vw;
+}
+
+.central_ass input {
+    width: 45vw;
+    height: 5vh;
+    font-family: 'Cutive Mono', monospace;
+    font-size: 28px;
+    border-width: 0px;
+    border-radius: 20px 0 20px  0;
+    padding-left: 15px;
+    background-color: #DFDFDF;
+    margin: 2vh 0;
+    align-self: center;
+}
+
+.central_ass button {
+    align-self: center;
+    width: 15vw;
+    height: 3vw;
+    background-color: #263326;
+    border-style: solid;
+    border-radius: 24px 0 24px 0;
+    margin: 3vh 0;
+}
+ 
+.central_ass label {
+    width: 15vw;
+    line-height: 3vh;
+    text-align: center;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+}
+
+.cetral_ex {
+    display: flex;
+    flex-direction: column;
+    width: 50vw; 
+    margin: 2vh 0;
+}
+.cetral_ex p {
+    width: auto;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+    margin: 2vh 0 0 2vw;
+}
+.cetral_ex button{
+    align-self: center;
+    width: 15vw;
+    height: 3vw;
+    background-color: #805953;
+    border-style: solid;
+    border-radius: 24px 0 24px 0;;
+    margin: 3vh 0;
+}
+.cetral_ex label{
+    width: 15vw;
+    line-height: 3vh;
+    text-align: center;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+}

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../root/assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../root/assets/css/styled.css">
-    <title>Home Page</title>
+    <title>Vitreo | Configuração</title>
+    <link rel="icon" href="../root/assets/img/logoWeb.png" type="image/x-icon" >
 </head>
 <body class="fundo">
     <div class="esquerda">
@@ -35,11 +36,49 @@
     </div>
 
     <div class="central">
-        <div class="nav">
-            <p>Feed</p>
-            <p>Fórum</p>
-            <p>Favoritos</p>
-        </div>
+       <div class="central_user">
+            <P>Usuario:</P>
+            <input type="text" placeholder="black00@email.com">
+            <input type="password" placeholder="********">
+       </div>
+
+       <div class="central_seg">
+        <p>Segurança:</p>
+        <p id="destaque">Verificação em duas etapas</p>
+        <p id="radius">A verificação em duas etapas dificulta o acesso de pessoas mal-intencionadas à sua conta.</p>
+       </div>
+
+       <div class="central_idioma">
+        <p>Idioma:</p>
+        <select name="idioma" required="required">
+            <option >Portugues (Brasil)</option>
+            <option >Ingles</option>
+            <option >Espanhol</option>
+            <option >Portugues</option>
+            <option >Alamão</option>
+        </select>
+       </div>
+
+       <div class="central_notif" >
+            <p>Notificação</p>
+            <p id="radius">Notificar novo post os favoriros</p>
+            <p id="radius">Notificar novo resultado do fórum </p>
+       </div>
+
+       <div class="central_ass">
+        <p>Forma de pagamento</p>
+        <input type="text" placeholder="Visa **** **00">
+        <button>
+            <label>Ativa</label>
+        </button>
+       </div>
+
+       <div class="cetral_ex">
+        <p>Excluir conta</p>
+        <button>
+            <label>Excluir</label>
+        </button>
+       </div>
 
        
     </div>
