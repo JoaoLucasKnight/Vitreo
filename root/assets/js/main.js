@@ -2,7 +2,6 @@
 
 function navegar(pagina){
   // Defina a URL da página para a qual você deseja navegar
-  console.log(pagina)
   const novaPaginaURL = `${pagina}.html`;
 
   // Use window.location.href para redirecionar para a nova página

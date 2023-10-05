@@ -12,7 +12,8 @@
     border-style: solid;
     border-width: 0 1px 0 0; 
     border-color: #DFDFDF;  
-    padding: 0 1vw 0 5vw;
+    padding: 5vh 1vw 0 5vw;
+    
     
 }
 
@@ -65,6 +66,7 @@
 .central {
     width: 50vw;
     height: auto;
+    padding-top: 5vh;
 }
 
 .nav {
@@ -75,11 +77,20 @@
     align-items: center;
 }
 
+.nav button {
+    background-color: black;
+    border-style: none;
+}
+
 .nav p {
     font-family: 'Cutive Mono', monospace;
     color:#DFDFDF ;
     font-size: 32px;
     width: auto;
+}
+
+#foco {
+    font-weight: bold;
 }
 
 .post {
@@ -147,11 +158,12 @@
 }
 
 .direita {
+    
     width: 20vw;
     border-width: 0 0 0 1px;
     border-color: #DFDFDF;
     border-style: solid;
-    padding: 1vw 5vw 1vw 1vw;
+    padding: 5vh 5vw 1vw 1vw;
 
 }
 
@@ -183,7 +195,7 @@
     text-align: center;
     font-family: 'Cutive Mono', monospace;
     color:#DFDFDF ;
-    font-size: 24px;
+    font-size: 20px;
     margin: 2vh 0 2vh 0;
 }
 
@@ -267,6 +279,7 @@
 
 #destaque {
     font-size: 36px ;
+    font-weight: bold;
 }
 
 .central_idioma {
@@ -392,4 +405,150 @@
     font-family: 'Cutive Mono', monospace;
     color:#DFDFDF ;
     font-size: 32px;
+}
+.cetral_Salvar {
+    display: flex;
+    flex-direction: column;
+    width: 50vw; 
+    margin: 2vh 0;
+}
+.cetral_Salvar p {
+    width: auto;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+    margin: 2vh 0 0 2vw;
+}
+.cetral_Salvar button{
+    align-self: center;
+    width: 15vw;
+    height: 3vw;
+    background-color: #263326;
+    border-style: solid;
+    border-radius: 24px 0 24px 0;;
+    margin: 3vh 0;
+}
+.cetral_Salvar label{
+    width: 15vw;
+    line-height: 3vh;
+    text-align: center;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+}
+
+
+/*Anuncio*/
+
+.centro {
+
+    width: 50vw;
+    height: 100vh;
+}
+
+.add{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.add img {
+    width: 10vw;
+}
+
+.add p {
+    width: 44vw;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+    text-align: center;
+    margin: 2vh 0;
+}
+
+.add div {
+    width: 44vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.add button {
+    align-self: center;
+    width: 15vw;
+    height: 3vw;
+    background-color: #263326;
+    border-style: solid;
+    border-radius: 24px 0 24px 0;;
+    margin: 12vh 0;
+}
+
+.add label {
+    width: 15vw;
+    line-height: 3vh;
+    text-align: center;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 32px;
+}
+
+/* Forum e favoritos*/
+
+.ff {
+    padding-top: 5vh;
+    width: 50vw;
+    height: 100vh;
+}
+
+.fa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    padding-top: 4vh;
+
+}
+
+.favo{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 35vw;
+    padding: 1vh 1vw;
+    margin: 1.5vh 0 1.5vh 3vw;
+    border-style: solid;
+    border-color: #8C8C8C;
+    border-width: 0 0 1px 0;   
+    border-radius: 0 0 36px 0;
+    
+   
+}
+
+.favorito  {
+    width: 2.5vw;
+    height: 2.5vw;
+    background-color: black;
+    border: 2px;
+    border-color: #DFDFDF;
+    border-style: solid;
+    border-radius: 16px 0 16px 0;
+}
+
+.favo p {
+    text-align: center;
+    font-family: 'Cutive Mono', monospace;
+    color:#DFDFDF ;
+    font-size: 24px;
+    line-height: 2.5vw;
+}
+
+#largura {
+    width: 20vw;
+}
+
+ 
+
+.favo img {
+    width: 1.5vw;
 }
