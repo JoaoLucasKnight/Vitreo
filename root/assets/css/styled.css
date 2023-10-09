@@ -8,7 +8,12 @@
 }
 
 .esquerda {
-    width: auto;
+    height: 100vh; 
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20vw;
     border-style: solid;
     border-width: 0 1px 0 0; 
     border-color: #DFDFDF;  
@@ -25,7 +30,7 @@
     display: flex;
     flex-direction: row; 
     padding-left: 2vw;
-    margin: 40px 0 0 0;
+    margin: 3vh 0 0 0;
     background-color: black;
     border-style: none;
 }
@@ -34,15 +39,15 @@
     display: flex;
     flex-direction: row; 
     padding-left: 2vw;
-    margin: 40px 0 0 0;
+    margin: 3vh 0 0 0;
     background-color: black;
     border-style: none;
     font-weight: bold;
 }
 
 .menu img {
-    width: 32px;
-    height: 32px;
+    width: 1.5vw;
+    height: 1.5vw;
     margin: 0 1vw;
       
 }
@@ -51,7 +56,7 @@
    
     font-family: 'Cutive Mono', monospace;
     color:#DFDFDF ;
-    font-size: 32px;
+    font-size: 1.5vw;
     width: auto;
 }
 
@@ -64,9 +69,11 @@
 }
 
 .central {
-    width: 50vw;
+    margin: 0 25vw 0 25vw;
+    flex: 1;
     height: auto;
     padding-top: 5vh;
+    
 }
 
 .nav {
@@ -158,13 +165,22 @@
 }
 
 .direita {
-    
+    height: 100vh; 
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    right: 0;
     width: 20vw;
     border-width: 0 0 0 1px;
     border-color: #DFDFDF;
     border-style: solid;
     padding: 5vh 5vw 1vw 1vw;
 
+}
+
+#direitaf{
+    height: auto;
+    overflow: scroll;
 }
 
 .busca {
@@ -187,7 +203,7 @@
     text-align: center;
     font-family: 'Cutive Mono', monospace;
     color:#DFDFDF ;
-    font-size: 32px;
+    font-size: 1.5vw;
 }
 
 .texto {
@@ -195,7 +211,7 @@
     text-align: center;
     font-family: 'Cutive Mono', monospace;
     color:#DFDFDF ;
-    font-size: 20px;
+    font-size: 1.2vw;
     margin: 2vh 0 2vh 0;
 }
 
@@ -222,7 +238,7 @@
     text-align: center;
     font-family: 'Cutive Mono', monospace;
     color:#DFDFDF ;
-    font-size: 24px;
+    font-size: 1.2vw;
     line-height: 2.5vw;
 }
 
@@ -249,7 +265,7 @@
 }
 
 .central_user input {
-    width: 45vw;
+    width: 44vw;
     height: 5vh;
     font-family: 'Cutive Mono', monospace;
     font-size: 32px;
@@ -298,7 +314,7 @@
 }
 
 .central_idioma select {
-    width: 45vw;
+    width: 44vw;
     height: 5vh;
     font-family: 'Cutive Mono', monospace;
     font-size: 28px;
@@ -345,7 +361,7 @@
 }
 
 .central_ass input {
-    width: 45vw;
+    width: 44vw;
     height: 5vh;
     font-family: 'Cutive Mono', monospace;
     font-size: 28px;
@@ -441,14 +457,14 @@
 /*Anuncio*/
 
 .centro {
-
     width: 50vw;
-    height: 100vh;
+    height: auto;
+    margin: 0 25vw 0 25vw;
 }
 
 .add{
     width: 50vw;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -498,7 +514,8 @@
 .ff {
     padding-top: 5vh;
     width: 50vw;
-    height: 100vh;
+    height: 95vh;
+    margin: 0 25vw 0 25vw;
 }
 
 .fa {
