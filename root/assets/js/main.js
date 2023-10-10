@@ -22,11 +22,11 @@ function postar() {
 };
 
 function argumento(){
-  Post.classList.remove("desativao");
+  Post.classList.remove("desativado");
 };
 
 function argumentar(){
-  Post.classList.add("desativao");
+  Post.classList.add("desativado");
 };
 
 
