@@ -33,6 +33,7 @@ function argumentar(){
 
 
 
+
 /* Exemplo
 const btnCarrinho = document.querySelector(".cabecalho__carrinho")
 const btnExit = document.querySelector(".menulateral__button")
