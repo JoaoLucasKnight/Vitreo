@@ -1,3 +1,6 @@
+const btnPost = document.querySelector(".btt_post")
+const Post = document.querySelector(".postagens")
+const Argo = document.querySelector(".argu")
 
 
 function navegar(pagina){
@@ -8,7 +11,42 @@ function navegar(pagina){
   window.location.href = novaPaginaURL;
 }
 
+function novoPost(){
+   btnPost.classList.add("desativado");
+   Post.classList.remove("desativado");
+};
 
+function postar() {
+  btnPost.classList.remove("desativado");
+  Post.classList.add("desativado");
+};
+
+function argumento(){
+  Post.classList.remove("desativao");
+};
+
+function argumentar(){
+  Post.classList.add("desativao");
+};
+
+
+
+
+
+/* Exemplo
+const btnCarrinho = document.querySelector(".cabecalho__carrinho")
+const btnExit = document.querySelector(".menulateral__button")
+const menu = document.querySelector(".menulateral--desativado")
+
+
+btnExit.addEventListener("click", () =>{
+    menu.classList.replace('menulateral', 'menulateral--desativado')
+})
+
+btnCarrinho.addEventListener("click", ()=> {
+    menu.classList.replace('menulateral--desativado' ,'menulateral')
+})
+*/ 
 
 
 
