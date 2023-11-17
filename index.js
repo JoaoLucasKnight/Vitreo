@@ -1,6 +1,7 @@
 const express = require('express');
 const bigode = require('mustache-express');
-const data = require('./src/dados.js')
+const session = require('express-session')
+const data = require('./src/dados.js');
 
 const app = express();
 
@@ -14,6 +15,16 @@ app.use(express.static(__dirname + '/root'));
 app.use(express.urlencoded({extended: true}));
 
 
+// definindo sessão
+app.use(session({
+    secret: 'secret-token',
+    name: 'sessionId',  
+    resave: false,
+    saveUninitialized: false
+}))
+
+
+//rotas
 app.use('/', require("./src/routes/rotas.js"));
 
 
