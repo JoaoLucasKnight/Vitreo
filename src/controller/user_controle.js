@@ -27,10 +27,21 @@ async function login(req, res){
 
   function home(req,res){
     res.render('homePage.html')
-  }
+  };
+
+  function conta(req,res){
+    res.render('conta.html')
+  };
+  function config(req,res){
+    res.render('config.html')
+  };
 
   function cadastro(req,res){
     res.render('cadastro.html')
+  };
+
+  function add(req,res){
+    res.render('add.html')
   };
 
   function cadastrar(req,res){
@@ -58,5 +69,8 @@ module.exports ={
     login,
     cadastro,
     cadastrar,
-    home
+    home,
+    conta,
+    config,
+    add
 };

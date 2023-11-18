@@ -5,7 +5,7 @@ const Argo = document.querySelector(".argu")
 
 function navegar(pagina){
   // Defina a URL da página para a qual você deseja navegar
-  const novaPaginaURL = `${pagina}.html`;
+  const novaPaginaURL = `/${pagina}`;
 
   // Use window.location.href para redirecionar para a nova página
   window.location.href = novaPaginaURL;
