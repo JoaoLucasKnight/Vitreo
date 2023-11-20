@@ -5,6 +5,9 @@ const data = require('./src/dados.js');
 
 const app = express();
 
+
+
+
 //render html
 app.engine('html', bigode());
 app.set('view engine', 'html');
@@ -31,6 +34,7 @@ app.use('/', require("./src/routes/rotas.js"));
 
 data.sync(() => console.log(`Banco de dados conectado`));
 const PORT = 7999
+
 
 app.listen(PORT, () =>{
     console.log("Escutando")
