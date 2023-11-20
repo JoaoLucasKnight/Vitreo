@@ -35,18 +35,22 @@
 
     </div>
 
-    <div class="central">
+    <form action="/atualizar_user" method="post" class="central">
        <div class="central_user">
             <P>Usuario:</P>
-            <input type="text" placeholder="black00@email.com">
-            <input type="password" placeholder="********">
+            <input type="text"  name="email" value="{{user.email}}" >
+            <input type="password" name="senha" value="{{user.senha}}" >
+            <input type="tel" name="telefone" value="{{user.telefone}}" >
        </div>
 
-       <div class="central_seg">
+       <!-- <div class="central_seg">
         <p>Segurança:</p>
         <p id="destaque">Verificação em duas etapas</p>
+
+        <input type="checkbox" value="on">
+        
         <p id="radius">A verificação em duas etapas dificulta o acesso de pessoas mal-intencionadas à sua conta.</p>
-       </div>
+       </div> -->
 
        <div class="central_idioma">
         <p>Idioma:</p>
@@ -59,7 +63,7 @@
         </select>
        </div>
 
-       <div class="central_notif" >
+       <!-- <div class="central_notif" >
             <p>Notificação</p>
             <p id="radius">Notificar novo post os favoriros</p>
             <p id="radius">Notificar novo resultado do fórum </p>
@@ -71,24 +75,24 @@
         <button>
             <label>Ativa</label>
         </button>
-       </div>
+       </div> -->
 
        <div class="cetral_Salvar">
         <p>Salvar alterações</p>
-        <button>
+        <button type="submit">
             <label>Salvar</label>
         </button>
         </div>
 
-       <div class="cetral_ex">
+       <!-- <div class="cetral_ex">
         <p>Excluir conta</p>
         <button>
             <label>Excluir</label>
         </button>
-       </div>
+       </div> -->
 
        
-    </div>
+    </form>
 
     <div class="direita">
         <button class="busca">

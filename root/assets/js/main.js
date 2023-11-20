@@ -29,6 +29,8 @@ function argumentar(){
   Post.classList.add("desativado");
 };
 
+module.exports = postar;
+
 
 
 

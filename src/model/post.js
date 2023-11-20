@@ -4,9 +4,9 @@ const data = require('../dados');
 
 const Post = data.define('post', {
     id:{
-        type: Sequelize.STRING,
-        autoIncrement: true,
+        type: Sequelize.INTEGER,
         primaryKey: true,
+        autoIncrement: true,
         allowNull: false,
 
     },
@@ -22,6 +22,6 @@ const Post = data.define('post', {
         type: Sequelize.BOOLEAN,
         defaultValue: false
     }
-})
+});
 
 module.exports = Post;

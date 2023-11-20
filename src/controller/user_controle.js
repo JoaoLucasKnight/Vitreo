@@ -40,7 +40,7 @@ const User = require('../model/user')
 
   User.create(user).then(()=>{
     let sucesso = true;
-    res.render("homePage.html", {sucesso});
+    res.redirect("/home");
 }).catch((err)=>{
     console.log(err);
     let erro = true;
@@ -48,6 +48,35 @@ const User = require('../model/user')
 });
 
 
+  };
+
+  async function update_user (req,res) {
+
+    let update = {
+      novo_email: req.body.email,
+      nova_senha:  req.body.senha,
+      novo_telefone: req.body.telefone
+    }
+    console.log(update)
+
+    try {
+      const user = await User.findByPk(req.session.usuario.id);
+
+      if(user){
+        user.email = update.novo_email;
+        user.senha = update.nova_senha;
+        user.telefone = update.novo_telefone;
+        
+        await user.save();
+
+        res.redirect('/config')
+      }
+
+    }catch (erro) {
+      console.error('Erro ao atualizar usuário:', erro);
+      res.redirect('/index');
+
+    }
   };
 
 // ROTAS BASICAS 
@@ -62,7 +91,8 @@ const User = require('../model/user')
     res.render('conta.html')
   };
   function config(req,res){
-    res.render('config.html')
+    const user = req.session.usuario
+    res.render('config.html', {user})
   };
   function cadastro(req,res){
     res.render('cadastro.html')
@@ -91,5 +121,6 @@ module.exports ={
     add, 
     forum,
     favorito,
-    verificar
+    verificar,
+    update_user
 };

@@ -157,10 +157,12 @@
         </button>
 
         <div class="postagens desativado">
-            <textarea rows="3" cols="50"  maxlength="150" placeholder="Escreva aqui..."></textarea>
-            <button onclick="postar()">
-                <p>Postar</p>
-            </button>
+            <form  action="/postar" class="postagens" method="post">
+                <textarea name="texto" rows="3" cols="50"  maxlength="150" placeholder="Escreva aqui..."></textarea>
+                <button  onclick="postar()" type="submit" ">
+                    <p>Postar</p>
+                </button>
+        </form>
         </div>
     
     <script src="/assets/js/main.js"></script>
