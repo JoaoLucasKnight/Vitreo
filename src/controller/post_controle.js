@@ -3,17 +3,15 @@ const Post = require('../model/post');
 function postar(req,res) {
 
     let post ={
-        id_user: req.session.usuario,
+        id_user: req.session.usuario.id,
         conteudo: req.body.texto,
     }
 
     Post.create(post).then(()=>{
-        let sucesso = true;
-        res.render("homePage.html", {sucesso});
+        res.redirect('/conta');
     }).catch((err)=>{
         console.log(err);
-        let erro = true;
-        res.render("cadastro.html", {erro});
+        res.render("index.html");
     });
 }
 

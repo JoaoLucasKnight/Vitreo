@@ -24,4 +24,6 @@ const Post = data.define('post', {
     }
 });
 
+
+
 module.exports = Post;

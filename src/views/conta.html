@@ -45,58 +45,21 @@
             </button>
         </div>
 
+        {{#posts}}
         <div class="post">
             <div class="post_user">
                 <div class="user">
                     <button >
-                        <p>00</p>
+                        <p>{{user.id}}</p>
                     </button>
-                    <p>Black</p>
                 </div>
             </div>
             <div class="post_cont">
-                <p> O medo da perda é um caminho para o lado negro.</p>
+                <p>{{conteudo}}</p>
             </div>
         </div>
-        <div class="post">
-            <div class="post_user">
-                <div class="user">
-                    <button >
-                        <p>00</p>
-                    </button>
-                    <p>Black</p>
-                </div>
-            </div>
-            <div class="post_cont">
-                <p> O medo da perda é um caminho para o lado negro.</p>
-            </div>
-        </div>
-        <div class="post">
-            <div class="post_user">
-                <div class="user">
-                    <button >
-                        <p>00</p>
-                    </button>
-                    <p>Black</p>
-                </div>
-            </div>
-            <div class="post_cont">
-                <p> O medo da perda é um caminho para o lado negro.</p>
-            </div>
-        </div>
-        <div class="post">
-            <div class="post_user">
-                <div class="user">
-                    <button >
-                        <p>00</p>
-                    </button>
-                    <p>Black</p>
-                </div>
-            </div>
-            <div class="post_cont">
-                <p> O medo da perda é um caminho para o lado negro.</p>
-            </div>
-        </div>
+        {{/posts}}
+       
 
        
     </div>
@@ -109,38 +72,16 @@
         <p class="texto">Talve seja do seu interesse</p>
 
         <div>
+            {{#usuario}}
             <div class="recomendacoes">
                 <div>
-                    <p>@1</p>
+                    <p>{{id}}</p>
                 </div>
-                <p>Darth Vader</p>
 
                 <img src="/assets/img/Icons/x.svg" alt="">
             </div>
-            <div class="recomendacoes">
-                <div>
-                    <p>z7</p>
-                </div>
-                <p>Bilbo B.</p>
-
-                <img src="/assets/img/Icons/x.svg" alt="">
-            </div>
-            <div class="recomendacoes">
-                <div>
-                    <p>*p</p>
-                </div>
-                <p>Frodo B.</p>
-
-                <img src="/assets/img/Icons/x.svg" alt="">
-            </div>
-            <div class="recomendacoes">
-                <div>
-                    <p>9_</p>
-                </div>
-                <p>Sasuke Uchiha</p>
-
-                <img src="/assets/img/Icons/x.svg" alt="">
-            </div>
+            {{/usuario}}
+          
         </div>
 
     </div>

@@ -46,6 +46,7 @@
             
         </div>
 
+        {{#posts}}
         <div class="post">
             <div class="post_user">
                 <div class="user">
@@ -55,8 +56,9 @@
                 </div>
                 <img src="/assets/img/Icons/star.svg" alt="">
             </div>
+           
             <div class="post_cont">
-                <p> O medo da perda é um caminho para o lado negro.</p>
+                <p>{{conteudo}}</p>
             </div>
             <div class="post_int">
                 <img src="/assets/img/Icons/coração.svg" alt="">
@@ -65,6 +67,30 @@
                 <img src="/assets/img/Icons/block.svg" alt="">
             </div>
         </div>
+        {{/posts}}
+
+        {{#erro_post}}
+        <div class="post">
+            <div class="post_user">
+                <div class="user">
+                    <button >
+                        <p>{{user.id}}</p>
+                    </button>
+                </div>
+                <img src="/assets/img/Icons/star.svg" alt="">
+            </div>
+           
+            <div class="post_cont">
+                <p>nada</p>
+            </div>
+            <div class="post_int">
+                <img src="/assets/img/Icons/coração.svg" alt="">
+                <img src="/assets/img/Icons/repost.svg" alt="">
+                <img src="/assets/img/Icons/denuncia.svg" alt="">
+                <img src="/assets/img/Icons/block.svg" alt="">
+            </div>
+        </div>
+        {{/erro_post}}
         <!-- <div class="post">
             <div class="post_user">
                 <div class="user">
