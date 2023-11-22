@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/styled.css">
-    <title>Vitreo | Conta</title>
+    <title>Vitreo | Perfis</title>
     <link rel="icon" href="/assets/img/logoWeb.png" type="image/x-icon" >
 </head>
 <body class="fundo">
@@ -38,27 +38,28 @@
     <div class="central">
         <div class="nav">
             <button id="foco">
-                <p>Suas postagens</p>
+                <p>Conta:  {{id}}</p>
             </button>
-            <button name="favorito" onclick="navegar(name)">
-                <p>Favoritos</p>
+            <button onclick="addFav(id)">
+                <img src="/assets/img/Icons/star.svg" alt="" width="64px">
             </button>
+            
         </div>
 
-        {{#posts}}
+        
         <div class="post">
             <div class="post_user">
                 <div class="user">
                     <button >
-                        <p>{{id_user}}</p>
+                        <p>{{id}}</p>
                     </button>
                 </div>
             </div>
             <div class="post_cont">
-                <p>{{conteudo}}</p>
+                <p>ola</p>
             </div>
         </div>
-        {{/posts}}
+        
        
 
        
@@ -72,15 +73,15 @@
         <p class="texto">Talve seja do seu interesse</p>
 
         <div>
-            {{#users}}
+            
             <div class="recomendacoes">
                 <div>
-                    <p>{{id}}</p>
+                    <p>00</p>
                 </div>
 
                 <img src="/assets/img/Icons/x.svg" alt="">
             </div>
-            {{/users}}
+    
           
         </div>
 

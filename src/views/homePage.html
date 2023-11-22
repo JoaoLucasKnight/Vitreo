@@ -51,7 +51,7 @@
             <div class="post_user">
                 <div class="user">
                     <button >
-                        <p>{{user.id}}</p>
+                        <p>{{id_user}}</p>
                     </button>
                 </div>
                 <img src="/assets/img/Icons/star.svg" alt="">
@@ -142,38 +142,14 @@
         <p class="texto">Talve seja do seu interesse</p>
 
         <div>
-            <div class="recomendacoes">
+            {{#users}}
+            <button class="recomendacoes" onclick="perfil('{{id}}')">
                 <div>
-                    <p>@1</p>
+                    <p>{{id}}</p>
                 </div>
-                <p>Darth Vader</p>
-
                 <img src="/assets/img/Icons/x.svg" alt="">
-            </div>
-            <div class="recomendacoes">
-                <div>
-                    <p>z7</p>
-                </div>
-                <p>Bilbo B.</p>
-
-                <img src="/assets/img/Icons/x.svg" alt="">
-            </div>
-            <div class="recomendacoes">
-                <div>
-                    <p>*p</p>
-                </div>
-                <p>Frodo B.</p>
-
-                <img src="/assets/img/Icons/x.svg" alt="">
-            </div>
-            <div class="recomendacoes">
-                <div>
-                    <p>9_</p>
-                </div>
-                <p>Sasuke Uchiha</p>
-
-                <img src="/assets/img/Icons/x.svg" alt="">
-            </div>
+            </button>
+            {{/users}}
         </div>
 
     </div>

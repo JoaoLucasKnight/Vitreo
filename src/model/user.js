@@ -33,5 +33,7 @@ const User = data.define('user', {
 
 });
 
+
+
 module.exports = User;
 

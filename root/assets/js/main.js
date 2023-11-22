@@ -11,6 +11,10 @@ function navegar(pagina){
   window.location.href = novaPaginaURL;
 }
 
+function perfil(id){
+  window.location.href = `/perfil?id=${id}`
+}
+
 function novoPost(){
    btnPost.classList.add("desativado");
    Post.classList.remove("desativado");
@@ -29,7 +33,7 @@ function argumentar(){
   Post.classList.add("desativado");
 };
 
-module.exports = postar;
+
 
 
 

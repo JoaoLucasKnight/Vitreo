@@ -1,5 +1,10 @@
-const User = require('../model/user')
-const Post = require('../model/post')
+const User = require('../model/user.js')
+const Post = require('../model/post.js')
+const Fav = require('../model/fav.js')
+
+// tive que associar as tabelas que foi nescessario fazer um left join para mostrar todo os user que não são dos nosso favoritos
+User.hasMany(Fav, { foreignKey: 'id_user' });
+Fav.belongsTo(User, { foreignKey: 'id_user' });
 
 const Sequelize = require('sequelize')
 
@@ -96,50 +101,37 @@ const Sequelize = require('sequelize')
   res.render('index.html');
   };
 
-  function home(req,res){
-    const user = req.session.usuario
-    
-     Post.findAll({
-       where:{
-         id_user: req.session.usuario.id
-       },
-       order: [['createdAt', 'DESC']]
-     }).then((posts)=>{
-      console.log(posts)
-       res.render('homePage.html', {user, posts});
-
-     }).catch((erro_posts)=>{
-       res.render('homePage.html', {user, erro_posts});
-     });
+  async function home(req, res) {
+    try {
+      const id =  req.session.usuario.id 
+      const users = await not_fav(id);
+      const posts = await getAllPosts();
+  
+        
+        res.render('homePage.html', { posts, users });
+     
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Erro interno do servidor");
+    }
   };
+  
+  async function conta(req,res){
 
-
-  function conta(req,res){
-    const user = req.session.usuario
-    
-    User.findAll({
-      where: {
-        id: {
-          [Sequelize.Op.not]: req.session.usuario.id
-        }
-      }
-    }).then((usuario)=>{
-      
-        return Post.findAll({
-          where:{
-            id_user: req.session.usuario.id
-          },
-          order: [['createdAt', 'DESC']]
-            }).then((posts)=>{
-              console.log(posts)
-              res.render('conta.html', {user, posts, usuario});
-
-            }).catch((erro_posts)=>{
-              res.render('index.html', {erro_posts});
-            })
-        });
-
+    try {
+      const id =  req.session.usuario.id 
+      const users = await not_fav(id);
+      const posts = await getIdPosts(id);
+  
+        
+        res.render('conta.html', { posts, users });
+     
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Erro interno do servidor");
+    }
   };
+  
   function config(req,res){
     const user = req.session.usuario
     res.render('config.html', {user})
@@ -156,6 +148,63 @@ const Sequelize = require('sequelize')
   function favorito(req,res){
     res.render('favorito.html')
   };
+  function perfil(req,res){
+
+    const id = req.query.id;
+    console.log(id)
+    res.render('perfil.html',{id})
+  }
+
+  // funções de busca 
+  async function not_fav(usuarioLogadoId) {
+    try {
+      const users = await User.findAll({
+        where: {
+          id: {
+            [Sequelize.Op.not]: usuarioLogadoId,
+          },
+        },
+        include: [{
+          model: Fav,
+          where: {
+            id_user: usuarioLogadoId,
+          },
+          required: false,
+        }],
+      });
+      return users;
+    } catch (error) {
+      console.error(error);
+      throw new Error("Erro ao obter usuários não favoritos");
+    }
+  };
+  async function getAllPosts() {
+    try {
+      const posts = await Post.findAll({
+        order: [['createdAt', 'DESC']]
+      });
+      return posts;
+    } catch (error) {
+      console.error(error);
+      throw new Error("Erro ao obter todas as postagens");
+    }
+  }
+  async function getIdPosts(id) {
+    try {
+      const posts = await Post.findAll({
+        where:{
+          id_user: id
+        },
+        order: [['createdAt', 'DESC']]
+      });
+      return posts;
+    } catch (error) {
+      console.error(error);
+      throw new Error("Erro ao obter todas as postagens");
+    }
+  }
+
+
 
 
   
@@ -173,5 +222,6 @@ module.exports ={
     favorito,
     verificar,
     update_user,
+    perfil,
     sair
 };

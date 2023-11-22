@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const data = require('../dados');
 
+
 const Fav = data.define('fav', {
     id:{
         type: Sequelize.INTEGER,
