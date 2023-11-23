@@ -81,7 +81,7 @@ const Sequelize = require('sequelize')
           telefone: user.telefone
         };
 
-        res.redirect('/config')
+       await res.redirect('/config')
       }
 
     }catch (erro) {
@@ -90,6 +90,7 @@ const Sequelize = require('sequelize')
 
     }
   };
+
 
   function sair(req, res) {
     req.session.destroy();
@@ -267,10 +268,6 @@ const Sequelize = require('sequelize')
     }
   }
 
-
-
-
-  
 
 module.exports ={
     index,

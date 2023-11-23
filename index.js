@@ -4,7 +4,7 @@ const session = require('express-session')
 const data = require('./src/dados.js');
 
 const app = express();
-
+const bodyParser = require('body-parser');
 
 
 
@@ -16,6 +16,8 @@ app.use(express.static(__dirname + '/root'));
 
 //manipular dados
 app.use(express.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // definindo sessão

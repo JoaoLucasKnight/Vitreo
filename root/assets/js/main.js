@@ -42,6 +42,26 @@ function argumentar(){
   Post.classList.add("desativado");
 };
 
+function addFav(id){
+  console.log('Entrou na função addFav com id:', id);
+
+  fetch('/favoritar', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ id: id }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Resposta do servidor:', data);
+    // Faça algo com a resposta, se necessário
+  })
+  .catch(error => {
+    console.error('Erro ao fazer a solicitação POST:', error);
+  });
+}
+
 // function remover(){
 //   remover.classList.add('desativado');
 // }

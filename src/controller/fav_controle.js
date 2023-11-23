@@ -1,19 +1,21 @@
 const Fav = require('../model/fav');
 
-function favoritar(req, res) {
+async function favoritar(req, res) {
+    console.log("entrou no favoritar " + req.body.id);
 
-    let fav = {
-        id_user: req.session.usuario.id,
-        id_fav: req.body.favorito
-    }
+    try {
+        let fav = {
+            id_user: req.session.usuario.id,
+            id_fav: req.body.id
+        };
 
-    Fav.create(fav).then(()=>{
+        await Fav.create(fav);
         res.redirect('/favorito');
-    }).catch((err)=>{
-        console.log(err);
+    } catch (err) {
+        console.error(err);
         res.render("index.html");
-    });
-
+    }
 };
 
 module.exports = favoritar;
+
