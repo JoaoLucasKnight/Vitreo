@@ -45,24 +45,21 @@
             </button>
             
         </div>
-
         
+        {{#posts}}
         <div class="post">
             <div class="post_user">
                 <div class="user">
-                    <button >
-                        <p>{{id}}</p>
-                    </button>
+                    <div >
+                        <p>{{id_user}}</p>
+                    </div>
                 </div>
             </div>
             <div class="post_cont">
-                <p>ola</p>
+                <p>{{conteudo}}</p>
             </div>
         </div>
-        
-       
-
-       
+        {{/posts}}
     </div>
 
     <div class="direita">
@@ -73,14 +70,17 @@
         <p class="texto">Talve seja do seu interesse</p>
 
         <div>
-            
-            <div class="recomendacoes">
+            {{#users}}
+            <button class="recomendacoes" onclick="perfil('{{id}}')">
                 <div>
-                    <p>00</p>
+                    <p>{{id}}</p>
                 </div>
-
-                <img src="/assets/img/Icons/x.svg" alt="">
-            </div>
+                <!-- 
+                    <button  onclick="remover()">
+                    <img src="/assets/img/Icons/x.svg" alt="">
+                    </button> 
+                -->
+            {{/users}}
     
           
         </div>

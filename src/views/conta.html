@@ -49,8 +49,11 @@
         <div class="post">
             <div class="post_user">
                 <div class="user">
-                    <button >
+                    <div>
                         <p>{{id_user}}</p>
+                    </div>
+                    <button onclick="deletarPost('{{id}}')">
+                        <img src="/assets/img/Icons/x.svg" alt="">
                     </button>
                 </div>
             </div>
@@ -73,13 +76,15 @@
 
         <div>
             {{#users}}
-            <div class="recomendacoes">
+            <button class="recomendacoes" onclick="perfil('{{id}}')">
                 <div>
                     <p>{{id}}</p>
                 </div>
-
-                <img src="/assets/img/Icons/x.svg" alt="">
-            </div>
+                <!-- 
+                    <button  onclick="remover()">
+                    <img src="/assets/img/Icons/x.svg" alt="">
+                    </button> 
+                -->
             {{/users}}
           
         </div>
@@ -91,12 +96,13 @@
     </button>
 
     <div class="postagens desativado">
-        <textarea rows="3" cols="50"  maxlength="150" placeholder="Escreva aqui..."></textarea>
-        <button onclick="postar()">
-            <p>Postar</p>
-        </button>
+        <form  action="/postar" class="postagens" method="post">
+            <textarea name="texto" rows="3" cols="50"  maxlength="150" placeholder="Escreva aqui..."></textarea>
+            <button  onclick="postar()" type="submit" ">
+                <p>Postar</p>
+            </button>
+    </form>
     </div>
-
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

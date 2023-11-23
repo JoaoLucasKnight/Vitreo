@@ -1,7 +1,7 @@
 const btnPost = document.querySelector(".btt_post")
 const Post = document.querySelector(".postagens")
 const Argo = document.querySelector(".argu")
-
+const remover = document.querySelector('.recomendacoes');
 
 function navegar(pagina){
   // Defina a URL da página para a qual você deseja navegar
@@ -12,7 +12,16 @@ function navegar(pagina){
 }
 
 function perfil(id){
-  window.location.href = `/perfil?id=${id}`
+  let texto = id;
+  let id_url = encodeURIComponent(texto);
+  
+  console.log(id_url);
+    window.location.href = `/perfil?id=${id_url}`;   
+}
+
+function deletarPost(id_post){
+  console.log(id_post)
+  window.location.href = `/deletepost?id=${id_post}`;
 }
 
 function novoPost(){
@@ -32,6 +41,10 @@ function argumento(){
 function argumentar(){
   Post.classList.add("desativado");
 };
+
+// function remover(){
+//   remover.classList.add('desativado');
+// }
 
 
 

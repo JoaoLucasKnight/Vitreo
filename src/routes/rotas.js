@@ -15,6 +15,7 @@ rota.get('/add', controle_user.verificar ,controle_user.add);
 rota.get('/forum', controle_user.verificar ,controle_user.forum);
 rota.get('/favorito', controle_user.verificar ,controle_user.favorito);
 rota.get('/perfil', controle_user.verificar, controle_user.perfil )
+rota.get('/deletepost', controle_user.verificar, controle_user.deletepost)
 rota.get('/sair', controle_user.sair)
 
 rota.post('/atualizar_user', controle_user.verificar, controle_user.update_user)

@@ -98,7 +98,8 @@ const Sequelize = require('sequelize')
 
 // ROTAS BASICAS 
   function index(req,res){
-  res.render('index.html');
+    req.session.destroy();
+    res.render('index.html');
   };
 
   async function home(req, res) {
@@ -132,28 +133,90 @@ const Sequelize = require('sequelize')
     }
   };
   
-  function config(req,res){
-    const user = req.session.usuario
-    res.render('config.html', {user})
+  async function config(req,res){
+    try {
+      const user = req.session.usuario
+      const id =  req.session.usuario.id 
+      const users = await not_fav(id);
+      res.render('config.html', {user, users });
+     
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Erro interno do servidor");
+    }
   };
+
   function cadastro(req,res){
     res.render('cadastro.html')
   };
-  function add(req,res){
-    res.render('add.html')
+  async function add(req,res){
+
+    try {
+      const id =  req.session.usuario.id 
+      const users = await not_fav(id);
+      res.render('add.html', { users });
+     
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Erro interno do servidor");
+    }
+
   };
   function forum(req,res){
     res.render('forum.html')
   };
-  function favorito(req,res){
-    res.render('favorito.html')
+  async function favorito(req,res){
+    try {
+      const id =  req.session.usuario.id 
+      const users = await not_fav(id);
+      res.render('favorito.html', { users });
+     
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Erro interno do servidor");
+    }
   };
-  function perfil(req,res){
+  
+  async function perfil(req,res){
+    try{
+      const id = req.query.id;
+      const posts = await getIdPosts(id)
+      
+      const logId = req.session.usuario.id
+      const users = await not_fav(logId);
 
-    const id = req.query.id;
-    console.log(id)
-    res.render('perfil.html',{id})
+      res.render('perfil.html',{id, posts, users})
+      }catch (error) {
+        console.error(error);
+        res.status(500).send("Erro interno do servidor");
+      }
   }
+
+  async function deletepost(req, res) {
+    try {
+      const id_dono = req.session.usuario.id;
+      const id = req.query.id;
+  
+      const rowsDeleted = await Post.destroy({
+        where: {
+          id_user: id_dono,
+          id: id
+        }
+      });
+  
+      if (rowsDeleted > 0) {
+        console.log('Post deletado com sucesso!');
+        res.redirect('/conta');
+      } else {
+        console.log('Post não encontrado ou usuário não autorizado.');
+        res.status(404).send('Post não encontrado ou usuário não autorizado.');
+      }
+    } catch (error) {
+      console.error('Erro ao deletar o post:', error);
+      res.status(500).send('Erro ao deletar o post.');
+    }
+  }
+  
 
   // funções de busca 
   async function not_fav(usuarioLogadoId) {
@@ -223,5 +286,6 @@ module.exports ={
     verificar,
     update_user,
     perfil,
+    deletepost,
     sair
 };
